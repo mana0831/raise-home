@@ -1,9 +1,35 @@
 @use "sass:map";
 @use "../global" as g;
 
+/* ==========================================================================
+  Foundation
+========================================================================== */
 
 // サイト全体のベースを記述
 // 基本的には。初期構築時以外編集しない
 
 /* base
   ----------------------------------------------------------------- */
+:root {
+  --color-Black: #55504A;
+  --color-Gray: #f0f0f0;
+  --color-White: #ffffff;
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  color: var(--color-Black);
+  @include g.font-noto-sans-serif;
+  margin: 0;
+}

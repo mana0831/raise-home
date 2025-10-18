@@ -1,14 +1,9 @@
+@use "sass:map";
+
 // 色変数を設定
 // 接頭辞は役割（c-, bg-, border-, text- など）がわかるもの
 // c-は最も汎用性が高い。色の使われ方が決まっていなければc-、決まっていればbg-やtext-を使う
 
-:root {
-  --color-Black: #333333;
-  --color-Gray: #f0f0f0;
-  --color-White: #ffffff;
-}
-
-// $color-black: #333333;
 $c-base: #2E2F30;
 $c-main: #333D80;
 $c-accent: #C8102E;
