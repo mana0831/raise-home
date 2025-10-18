@@ -11,8 +11,9 @@ PDFLOCSS
 * 要素をモジュールごとに分割するのではなくページとセクションごとに分割する
 
 参考URL：
-https://github.com/hiloki/flocss.
-https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa
+[https://github.com/hiloki/flocss](https://github.com/hiloki/flocss)
+[https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa](https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa)
+
 
 ## ディレクトリ構成
 
