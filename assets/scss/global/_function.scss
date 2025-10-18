@@ -1,0 +1,15 @@
+// 関数を定義
+
+// pxをvwに変換
+@function vw($px, $basewidth: 1920){
+  $value: $px;
+  $value: calc($px / $basewidth * 100vw);
+  @return $value;
+}
+
+// pxをvhに変換
+@function vh($px, $baseheight: 1080){
+  $value: $px;
+  $value: calc($px / $baseheight * 100vh);
+  @return $value;
+}

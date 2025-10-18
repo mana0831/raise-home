@@ -1,0 +1,6 @@
+// クラス名の命名規則：
+// .u-[Emmetのプロパティ+値]
+// .u-[Emmetのプロパティ+値]-[ブレイクポイント]-[min or max]
+
+@use "sass:map";
+@use "../../global" as g;

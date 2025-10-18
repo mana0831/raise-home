@@ -1,26 +1,48 @@
 # 概要
 RiseTech 中級コーディング課題「建築会社サイト」の静的コーディングの実装
 
+# サイト確認URL
+https://mana0831.github.io/raise-home/
+
 ## ディレクトリ構成
 
 ```
-.
-└── laravel
-    ├── README.md
-    ├── composer.json
-    ├── composer.lock
-    ├── docker-compose.yml
-    ├── package-lock.json
-    ├── package.json
-    ├── phpunit.xml
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.php
-    │   └── robots.txt
-    └── vite.config.js
+├── foundation
+│   ├── _base.scss
+│   └── _reset.scss
+├── layout
+│   ├── _footer.scss
+│   ├── _header.scss
+│   ├── _main.scss
+│   └── _sidebar.scss
+└── object
+    ├── component
+    │   ├── _button.scss
+    │   ├── _dialog.scss
+    │   ├── _grid.scss
+    │   └── _media.scss
+    ├── project
+    │   ├── _articles.scss
+    │   ├── _comments.scss
+    │   ├── _gallery.scss
+    │   └── _profile.scss
+    └── utility
+        ├── _align.scss
+        ├── _clearfix.scss
+        ├── _margin.scss
+        ├── _position.scss
+        ├── _size.scss
+        └── _text.scss
 ```
 # CSSについて
 ## CSS設計
+PDFLOCSS
+* ディレクトリ構成はFLOCSSと同じ
+* 要素をモジュールごとに分割するのではなくページとセクションごとに分割する
+
+参考URL：
+https://github.com/hiloki/flocss
+https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa
 
 ## アニメーションの設定
 ### hoverアニメーション
