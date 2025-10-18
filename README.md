@@ -4,36 +4,6 @@ RiseTech 中級コーディング課題「建築会社サイト」の静的コ�
 # サイト確認URL
 https://mana0831.github.io/raise-home/
 
-## ディレクトリ構成
-
-```
-├── foundation
-│   ├── _base.scss
-│   └── _reset.scss
-├── layout
-│   ├── _footer.scss
-│   ├── _header.scss
-│   ├── _main.scss
-│   └── _sidebar.scss
-└── object
-    ├── component
-    │   ├── _button.scss
-    │   ├── _dialog.scss
-    │   ├── _grid.scss
-    │   └── _media.scss
-    ├── project
-    │   ├── _articles.scss
-    │   ├── _comments.scss
-    │   ├── _gallery.scss
-    │   └── _profile.scss
-    └── utility
-        ├── _align.scss
-        ├── _clearfix.scss
-        ├── _margin.scss
-        ├── _position.scss
-        ├── _size.scss
-        └── _text.scss
-```
 # CSSについて
 ## CSS設計
 PDFLOCSS
@@ -41,11 +11,39 @@ PDFLOCSS
 * 要素をモジュールごとに分割するのではなくページとセクションごとに分割する
 
 参考URL：
-https://github.com/hiloki/flocss
+https://github.com/hiloki/flocss.
 https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa
 
-## アニメーションの設定
-### hoverアニメーション
+## ディレクトリ構成
+
+```
+├── foundation
+│   ├── _base.scss
+│   └── _index.scss
+├── global
+│   ├── _color.scss
+│   ├── _font.scss
+│   ├── _function.scss
+│   ├── _mixin.scss
+│   └── _variables.scss
+├── layout
+│   ├── _footer.scss
+│   ├── _header.scss
+│   └── _main.scss
+├── object
+│   ├── component
+│   │   ├── _button.scss
+│   │   └── _heading.scss
+│   ├── project
+│   │   ├── _access.scss
+│   │   ├── _company.scss
+│   │   ├── _contact.scss
+│   │   └── _home.scss
+│   └── utility
+│       └── _utility.scss
+└── style.scss
+
+```
 
 ## ブレイクポイント
 
@@ -67,8 +65,10 @@ https://zenn.dev/wagashi_osushi/books/94efd21a66ccaa
 
 - ヘッダーロゴ：`999`
 - ハンバーガーボタン：`9999`
-
 ---
+
+## アニメーションの設定
+### hoverアニメーション
 
 ---
 
