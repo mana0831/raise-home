@@ -1,37 +1,3 @@
 @use "sass:map";
 
-/* variables
-  ----------------------------------------------------------------- */
-$color-black: #333333;
-
-:root {
-  --color-Black: #333333;
-  --color-Gray: #f0f0f0;
-  --color-White: #ffffff;
-}
-
-// /* -------------------------------------------------------------
-// //  メディアクエリ
-// // ------------------------------------------------------------*/
-// $mq-breakpoints: (
-//   "xs": 320px,
-//   "sm": 376px,
-//   "mmd": 600px,
-//   "md": 835px,
-//   "lg": 985px,
-//   "xl": 1200px,
-//   "xxl": 1441px,
-//   "fhd": 1921px,
-//   ) !default;
-
-// @mixin mq($breakpoint: md, $rule: min) {
-//   $breakpoint: map.get($mq-breakpoints, $breakpoint);
-
-//   @if $rule ==max {
-//     $breakpoint: $breakpoint - 1px;
-//   }
-
-//   @media screen and (#{$rule}-width: $breakpoint) {
-//     @content;
-//   }
-// }
+$hover-transition: .3s;

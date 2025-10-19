@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAISE HOME 未来と暮らしを豊かにする家づくり</title>
+  <title>お問い合わせ | RAISE HOME 未来と暮らしを豊かにする家づくり</title>
   <meta name="description" content="RAISE HOMEの公式サイトです。未来と暮らしを豊かにする家づくりをモットーに、住み良い暮らしをご提案します。" />
   <!-- og -->
   <meta property="og:title" content="RAISE HOME 未来と暮らしを豊かにする家づくり" />
@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- JavaScript -->
-  <script type="module" src="assets/js/main.js"></script>
 
   <!-- フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,37 +33,34 @@
 </head>
 
 
-<body class="l-wrapper p-home">
-  <header class="l-header js-header">
+<body class="p-home l-wrapper">
+  <header class="l-header">
     <div class="l-header__inner">
       <p class="l-header__logo">
-        <a class="l-header__logo-link" href="/">
+        <a href="/">
           <img src="/assets/images/common/logo.svg" alt="RAISE HOME" width="255" height="28">
         </a>
       </p>
-
-      <button type="button" class="c-hamburger-button js-hamburger-button" aria-controls="aria-nav" aria-expanded="false" aria-label="メニューを開閉する">
-        <span class="c-hamburger-button__line">スマートフォンメニュー展開用ボタン</span>
-      </button>
-
-      <nav id="aria-nav" class="l-header-nav js-global-nav">
+      <nav class="l-header-nav">
         <ul class="l-header-nav__list">
           <li class="l-header-nav__item"><a class="l-header-nav__link" href="/company/">会社概要</a></li>
           <li class="l-header-nav__item"><a class="l-header-nav__link" href="/access/">アクセス</a></li>
-          <li class="l-header-nav__item"><a class="l-header-nav__link l-header-nav__link--contact" href="/contact/">お問い合わせ</a></li>
+          <li class="l-header-nav__item"><a class="l-header-nav__link" href="/contact/">お問い合わせ</a></li>
         </ul>
-      </nav>
 
+      </nav>
     </div>
   </header>
 
-  <main class="l-main">
-    <div class="p-home-main-visual">
-      <div class="p-home-main-visual__inner">
-        <img src="/assets/images/top/slideshow/slide01.png" alt="" width="2880" height="1670">
-        <h1 class="main-visual__title">未来と暮らしを<br>豊かにする家づくり</h1>
-      </div>
-    </div>
-  </main>
+  <div class="l-main">
+    <main class="p-home__main">
+      <section class="p-hero">
+        <div class="p-hero__inner">
+          <h2 class="p-hero__title">未来と暮らしを豊かにする家づくり</h2>
+        </div>
+      </section>
+    </main>
+
+  </div>
 </body>
 </html>

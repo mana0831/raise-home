@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
   Global
 ========================================================================== */
@@ -7,9 +8,10 @@
 /* base
   ----------------------------------------------------------------- */
 :root {
-  --color-Black: #55504A;
-  --color-Gray: #f0f0f0;
+  --color-Black: #333333;
+  --color-Gray: #55504A;
   --color-White: #ffffff;
+  --color-Orange: #F7B000;
 }
 
 *,
@@ -24,7 +26,7 @@ img {
 }
 
 body {
-  color: var(--color-Black);
+  color: var(--color-Gray);
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   line-height: normal;
@@ -32,14 +34,211 @@ body {
   margin: 0;
 }
 
+body.is-fixed {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* ==========================================================================
   Layout
 ========================================================================== */
 /* header
   ----------------------------------------------------------------- */
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.4s ease;
+}
+.l-header.is-active {
+  background-color: transparent;
+}
+.l-header.is-active .l-header__logo {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+.l-header__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-header__logo {
+  flex-shrink: 0;
+  margin: 0 0 0 60px;
+  width: 254.074px;
+  height: 28px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+@media screen and (max-width: 834px) {
+  .l-header__logo {
+    margin-left: 27px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-header__logo {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .l-header__logo {
+    width: 228.667px;
+    height: 25.2px;
+  }
+}
+.l-header__logo-link {
+  display: block;
+}
+.l-header__logo-link:hover {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.l-header-nav {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .l-header-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 252px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateX(100%); /* ← 画面外 */
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  .l-header-nav.is-active {
+    transform: translateX(0);
+  }
+}
+.l-header-nav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .l-header-nav__list {
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 99px;
+  }
+}
+.l-header-nav__item {
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .l-header-nav__item {
+    width: 172px;
+  }
+}
+.l-header-nav__link {
+  display: block;
+  color: var(--color-Gray);
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  padding: 19px 20px;
+}
+@media screen and (max-width: 768px) {
+  .l-header-nav__link {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 16px 32px;
+  }
+}
+.l-header-nav__link:hover {
+  background-color: var(--color-White);
+  transition: all 0.3s ease;
+}
+.l-header-nav__link--contact {
+  background-color: var(--color-Gray);
+  color: var(--color-White);
+}
+.l-header-nav__link--contact:hover {
+  background-color: var(--color-Orange);
+}
+
+.l-wrapper {
+  overflow: hidden;
+}
+
 /* ==========================================================================
   Component
 ========================================================================== */
+/* ハンバーガーメニューボタン
+  ----------------------------------------------------------------- */
+.c-hamburger-button {
+  display: none;
+  width: 56px;
+  height: 56px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--color-Gray);
+  z-index: 3;
+}
+@media screen and (max-width: 768px) {
+  .c-hamburger-button {
+    display: block;
+  }
+}
+.c-hamburger-button__line {
+  position: relative;
+  font-size: 0;
+  background-color: var(--color-White);
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+.c-hamburger-button__line::before, .c-hamburger-button__line::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-White);
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s ease;
+}
+.c-hamburger-button__line::before {
+  top: -10px;
+}
+.c-hamburger-button__line::after {
+  bottom: -10px;
+}
+.c-hamburger-button.is-active .c-hamburger-button__line {
+  background-color: transparent;
+}
+.c-hamburger-button.is-active .c-hamburger-button__line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.c-hamburger-button.is-active .c-hamburger-button__line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
 /* ==========================================================================
   Project
 ========================================================================== */

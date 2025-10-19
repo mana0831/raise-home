@@ -3,6 +3,151 @@
 
 /* header
   ----------------------------------------------------------------- */
-.l-header {
 
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: rgb(255  255  255 / 70%);
+  transition: background-color 0.4s ease;
+
+  &.is-active {
+    background-color: transparent;
+
+    .l-header__logo {
+      opacity: 0;
+      transform: translateY(-4px);
+      pointer-events: none;
+    }
+  }
+
+  // l-header__inner
+  &__inner {
+    max-width: 1440px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // l-header__logo
+  &__logo {
+    flex-shrink: 0;
+    margin: 0 0 0 60px;
+    width: 254.074px;
+    height: 28px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    @include g.mq(md, max) {
+      margin-left: 27px;
+    }
+
+    @include g.mq(mmd, max) {
+      margin-left: 20px;
+    }
+
+    @include g.mq(sm, max) {
+      width: 228.667px;
+      height: 25.2px;
+    }
+  }
+
+  // l-header__logo-link
+  &__logo-link {
+    display: block;
+
+    &:hover {
+      transition: all g.$hover-transition ease;
+      opacity: 0.8;
+    }
+  }
+}
+
+
+.l-header-nav {
+  display: block;
+
+  @include g.mq(mmd, max) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 252px;
+    height: 100vh;
+    background-color: rgb(255  255  255 / 90%);
+    transform: translateX(100%); /* ← 画面外 */
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;  // safari対策
+    will-change: transform;   // safari対策
+
+    &.is-active {
+      transform: translateX(0);
+    }
+  }
+
+  // l-header-nav__list
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include g.mq(mmd, max) {
+      flex-direction: column;
+      row-gap: 8px;
+      margin-top: 99px;
+    }
+  }
+
+  // l-header-nav__item
+  &__item {
+    margin: 0;
+
+    @include g.mq(mmd, max) {
+      width: 172px;
+    }
+  }
+
+  // l-header-nav__link
+  &__link {
+    display: block;
+    color: var(--color-Gray);
+    @include g.font-noto-sans-serif;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    padding: 19px 20px;
+
+    @include g.mq(mmd, max) {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: left;
+      padding: 16px 32px;
+    }
+
+    &:hover {
+      background-color: var(--color-White);
+      transition: all g.$hover-transition ease;
+    }
+
+    // l-header-nav__link--contact
+    &--contact {
+      background-color: var(--color-Gray);
+      color: var(--color-White);
+
+      @include g.mq(mmd, max) {
+
+      }
+
+      &:hover {
+        background-color: var(--color-Orange);
+      }
+    }
+  }
 }

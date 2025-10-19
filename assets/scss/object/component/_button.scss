@@ -1,2 +1,64 @@
 @use "sass:map";
 @use "../../global/" as g;
+
+/* ハンバーガーメニューボタン
+  ----------------------------------------------------------------- */
+.c-hamburger-button {
+  display: none;
+  width: 56px;
+  height: 56px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--color-Gray);
+  z-index: 3;
+
+  @include g.mq(mmd, max) {
+    display: block;
+  }
+
+  // c-hamburger-button__line
+  &__line {
+    position: relative;
+    font-size: 0;
+    background-color: var(--color-White);
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    &::before ,&::after {
+      content: "";
+      position: absolute;
+      background-color: var(--color-White);
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+    &.is-active {
+      .c-hamburger-button__line {
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+}

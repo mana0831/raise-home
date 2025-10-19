@@ -11,9 +11,10 @@
 /* base
   ----------------------------------------------------------------- */
 :root {
-  --color-Black: #55504A;
-  --color-Gray: #f0f0f0;
+  --color-Black: #333333;
+  --color-Gray: #55504A;
   --color-White: #ffffff;
+  --color-Orange: #F7B000;
 }
 
 
@@ -29,7 +30,14 @@ img {
 }
 
 body {
-  color: var(--color-Black);
+  color: var(--color-Gray);
   @include g.font-noto-sans-serif;
   margin: 0;
+}
+
+// ハンバーガーメニュー表示時のスクロール防止
+body.is-fixed {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
