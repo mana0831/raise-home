@@ -94,6 +94,12 @@ body.is-fixed {
     height: 25.2px;
   }
 }
+@media screen and (max-width: 319px) {
+  .l-header__logo {
+    flex-shrink: 1;
+    margin: 0 8px;
+  }
+}
 .l-header__logo-link {
   display: block;
 }

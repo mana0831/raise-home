@@ -54,6 +54,11 @@
       width: 228.667px;
       height: 25.2px;
     }
+
+    @include g.mq(xs, max) {
+      flex-shrink: 1;
+      margin: 0 8px;
+    }
   }
 
   // l-header__logo-link
