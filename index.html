@@ -17,8 +17,11 @@
 
   <!-- css -->
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 
   <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
   <script type="module" src="assets/js/main.js"></script>
 
   <!-- フォント -->
@@ -61,7 +64,29 @@
   <main class="l-main">
     <div class="p-home-main-visual">
       <div class="p-home-main-visual__inner">
-        <img src="/assets/images/top/slideshow/slide01.png" alt="" width="2880" height="1670">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="/assets/images/top/slideshow/slide01.png" alt="" width="2880" height="1670"></div>
+            <div class="swiper-slide"><img src="/assets/images/top/slideshow/slide02.png" alt="" width="2880" height="1670"></div>
+            <div class="swiper-slide"><img src="/assets/images/top/slideshow/slide03.png" alt="" width="2880" height="1670"></div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+
+
         <h1 class="main-visual__title">未来と暮らしを<br>豊かにする家づくり</h1>
       </div>
     </div>

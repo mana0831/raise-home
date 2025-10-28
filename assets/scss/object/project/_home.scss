@@ -1,2 +1,37 @@
 @use "sass:map";
 @use "../../global" as g;
+
+.p-home {
+
+}
+
+.p-home-main-visual {
+  height: 100vh;
+  max-height: 835px;
+  overflow: hidden;
+  position: relative;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; // ← 中央配置（上下左右中央）
+      max-height: 835px;       // 念のため制限
+    }
+  }
+}

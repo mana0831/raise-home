@@ -248,6 +248,33 @@ body.is-fixed {
 /* ==========================================================================
   Project
 ========================================================================== */
+.p-home-main-visual {
+  height: 100vh;
+  max-height: 835px;
+  overflow: hidden;
+  position: relative;
+}
+.p-home-main-visual .swiper {
+  width: 100%;
+  height: 100%;
+}
+.p-home-main-visual .swiper-wrapper {
+  height: 100%;
+}
+.p-home-main-visual .swiper-slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-home-main-visual .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 835px;
+}
+
 /* ==========================================================================
   Utility
 ========================================================================== */
